@@ -1,9 +1,9 @@
-FROM python:3.7
+FROM python:3.9
 
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends \
         libatlas-base-dev gfortran nginx supervisor
-
+RUN apt-get install -y ffmpeg
 RUN pip3 install uwsgi
 
 COPY ./requirements.txt /project/requirements.txt
