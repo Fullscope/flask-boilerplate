@@ -4,6 +4,7 @@ services:
     
     image: ift:latest
     build: .
+    container_name: ift
     ports:
-     - "5050:5050"
+     - "5010:80"
   
